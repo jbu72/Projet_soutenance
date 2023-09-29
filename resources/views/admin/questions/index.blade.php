@@ -17,7 +17,7 @@
                         <span class="icon text-white-50">
                             <i class="fa fa-plus"></i>
                         </span>
-                        <span class="text">{{ __('New question') }}</span>
+                        <span class="text">@lang('public.new question')</span>
                     </a>
                 </div>
             </div>
@@ -30,8 +30,8 @@
 
                                 </th>
                                 <th>No</th>
-                                <th>Category</th>
-                                <th>Question Text</th>
+                                <th>@lang('public.category')</th>
+                                <th>@lang('public.question text')</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -61,7 +61,7 @@
                             </tr>
                             @empty
                             <tr>
-                                <td colspan="7" class="text-center">{{ __('Data Empty') }}</td>
+                                <td colspan="7" class="text-center">@lang('public.data empty')</td>
                             </tr>
                             @endforelse
                         </tbody>

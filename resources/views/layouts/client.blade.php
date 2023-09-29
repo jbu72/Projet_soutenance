@@ -25,22 +25,33 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <h3 class="mx-auto text-center">  
+                <h3 class="mx-auto text-center">
                     <a class="nav-link text-center" href="{{ route('client.test') }}">
-                        {{ __('Start Test') }}
-                    </a></h3>
-                <h5 class="mx-auto text-center d-flex">  
+                        @lang('public.start test')
+                    </a>
+                </h3>
+                <h5 class="mx-auto text-center d-flex">
                     @auth
-                        <a class="nav-link text-center" href="{{ route('admin.dashboard.index') }}">
-                            {{ auth()->user()->name }}
-                        </a>
-                        <a class="nav-link text-center" onclick="event.preventDefault();document.getElementById('logout-form').submit();" href="{{ route('logout') }}">
-                            Logout
-                        </a>
+                    <a class="nav-link text-center" href="{{ route('admin.dashboard.index') }}">
+                        {{ auth()->user()->name }}
+                    </a>
+                    <a class="nav-link text-center" onclick="event.preventDefault();document.getElementById('logout-form').submit();" href="{{ route('logout') }}">
+                        @lang('public.logout')
+                    </a>
                     @endauth
+
+                    <div class="dropdown">
+                        <button class="btn text-white btn-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Language
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="locale/en">English</a></li>
+                            <li><a class="dropdown-item" href="locale/fr">Français</a></li>
+                        </ul>
+                    </div>
                     <form class="d-none" action="{{ route('logout') }}" id="logout-form" method="post">
-                        @csrf 
-                        
+                        @csrf
+
                     </form>
                 </h5>
             </div>

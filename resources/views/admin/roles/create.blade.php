@@ -19,15 +19,15 @@
         <div class="card shadow">
             <div class="card-header">
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">{{ __('create role') }}</h1>
-                    <a href="{{ route('admin.roles.index') }}" class="btn btn-primary btn-sm shadow-sm">{{ __('Go Back') }}</a>
+                    <h1 class="h3 mb-0 text-gray-800">@lang('public.create role')</h1>
+                    <a href="{{ route('admin.roles.index') }}" class="btn btn-primary btn-sm shadow-sm">@lang('public.go back')</a>
                 </div>
             </div>
             <div class="card-body">
                 <form action="{{ route('admin.roles.store') }}" method="POST">
                     @csrf
                     <div class="form-group">
-                        <label for="title">{{ __('Title') }}</label>
+                        <label for="title">@lang('public.title')</label>
                         <input type="text" class="form-control" id="title" placeholder="{{ __('Title') }}" name="title" value="{{ old('title') }}" />
                     </div>
                     <div class="form-group">
@@ -38,7 +38,7 @@
                             @endforeach
                         </select>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">{{ __('Save') }}</button>
+                    <button type="submit" class="btn btn-primary btn-block">@lang('public.save')</button>
                 </form>
             </div>
         </div>

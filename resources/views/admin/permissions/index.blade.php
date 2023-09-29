@@ -18,7 +18,7 @@
                         <span class="icon text-white-50">
                             <i class="fa fa-plus"></i>
                         </span>
-                        <span class="text">{{ __('New permission') }}</span>
+                        <span class="text">@lang('public.new permission')</span>
                     </a>
                     @endcan
                 </div>
@@ -32,7 +32,7 @@
 
                                 </th>
                                 <th>No</th>
-                                <th>Title</th>
+                                <th>@lang('public.title')</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -61,7 +61,7 @@
                             </tr>
                             @empty
                             <tr>
-                                <td colspan="7" class="text-center">{{ __('Data Empty') }}</td>
+                                <td colspan="7" class="text-center">@lang('public.data empty')</td>
                             </tr>
                             @endforelse
                         </tbody>

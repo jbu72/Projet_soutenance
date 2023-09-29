@@ -10,14 +10,14 @@
         <div class="card">
             <div class="card-header py-3 d-flex">
                 <h6 class="m-0 font-weight-bold text-primary">
-                    {{ __('category') }}
+                    @lang('public.category')
                 </h6>
                 <div class="ml-auto">
                     <a href="{{ route('admin.categories.create') }}" class="btn btn-primary">
                         <span class="icon text-white-50">
                             <i class="fa fa-plus"></i>
                         </span>
-                        <span class="text">{{ __('New category') }}</span>
+                        <span class="text">@lang('public.new category')</span>
                     </a>
                 </div>
             </div>
@@ -30,7 +30,7 @@
 
                                 </th>
                                 <th>No</th>
-                                <th>Name</th>
+                                <th>@lang('public.name')</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -59,7 +59,7 @@
                             </tr>
                             @empty
                             <tr>
-                                <td colspan="7" class="text-center">{{ __('Data Empty') }}</td>
+                                <td colspan="7" class="text-center">@lang('public.data empty')</td>
                             </tr>
                             @endforelse
                         </tbody>

@@ -14,7 +14,7 @@
                 </h6>
                 <div class="ml-auto">
                     <a href="{{ route('admin.results.index') }}" class="btn btn-primary">
-                        <span class="text">{{ __('Go Back') }}</span>
+                        <span class="text">@lang('public.go back')</span>
                     </a>
                 </div>
             </div>
@@ -23,7 +23,7 @@
                     <table class="table table-bordered table-striped table-hover" cellspacing="0" width="100%">
                     <thead>
                             <tr>
-                                <th>Question Text</th>
+                                <th>@lang('public.question text')</th>
                                 <th>Points</th>
                             </tr>
                         </thead>

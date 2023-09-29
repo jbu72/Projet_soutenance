@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LocalizationController;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -18,6 +19,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return redirect()->route('client.test');
 });
+
+//Localization Route
+
+Route::get("locale/{lange}",[LocalizationController::class, 'setLang']);
 
 Route::group(['middleware' => 'auth'], function() {
    

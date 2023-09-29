@@ -42,15 +42,24 @@
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link" href="{{ route('login', ['locale' => app()->getLocale()]) }}">@lang('public.login')</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register', ['locale' => app()->getLocale()]) }}">@lang('public.register')</a>
                                 </li>
                             @endif
+                            <div class="dropdown">
+                                <button class="btn text-white btn-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Language
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="locale/en">English</a></li>
+                                    <li><a class="dropdown-item" href="locale/fr">Français</a></li>
+                                </ul>
+                            </div>
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -60,7 +69,7 @@
                                 <div class="dropdown-menu dropdown-menu-end" >
                                     <a class="dropdown-item" href="#"
                                        onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        @lang('public.logout')
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

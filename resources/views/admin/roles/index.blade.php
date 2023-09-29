@@ -7,7 +7,7 @@
         <div class="card">
         <div class="card-header py-3 d-flex">
                 <h6 class="m-0 font-weight-bold text-primary">
-                {{ __('Roles') }}
+                @lang('public.roles')
                 </h6>
                 <div class="ml-auto">
                     @can('role_create')
@@ -15,7 +15,7 @@
                         <span class="icon text-white-50">
                             <i class="fa fa-plus"></i>
                         </span>
-                        <span class="text">{{ __('New role') }}</span>
+                        <span class="text">@lang('public.new role')</span>
                     </a>
                     @endcan
                 </div>
@@ -29,7 +29,7 @@
 
                                 </th>
                                 <th>No</th>
-                                <th>Title</th>
+                                <th>@lang('public.title')</th>
                                 <th>Permission</th>
                                 <th>Action</th>
                             </tr>
@@ -62,7 +62,7 @@
                             </tr>
                             @empty
                             <tr>
-                                <td colspan="7" class="text-center">{{ __('Data Empty') }}</td>
+                                <td colspan="7" class="text-center">@lang('public.data empty')</td>
                             </tr>
                             @endforelse
                         </tbody>

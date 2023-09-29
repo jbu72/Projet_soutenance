@@ -20,8 +20,8 @@
         <div class="card shadow">
             <div class="card-header">
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">{{ __('create option') }}</h1>
-                    <a href="{{ route('admin.options.index') }}" class="btn btn-primary btn-sm shadow-sm">{{ __('Go Back') }}</a>
+                    <h1 class="h3 mb-0 text-gray-800">@lang('public.create option')</h1>
+                    <a href="{{ route('admin.options.index') }}" class="btn btn-primary btn-sm shadow-sm">@lang('public.go back')</a>
                 </div>
             </div>
             <div class="card-body">
@@ -43,7 +43,7 @@
                         <label for="points">{{ __('points') }}</label>
                         <input type="number" class="form-control" id="points" placeholder="{{ __('option text') }}" name="points" value="{{ old('points') }}" />
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">{{ __('Save') }}</button>
+                    <button type="submit" class="btn btn-primary btn-block">@lang('public.save')</button>
                 </form>
             </div>
         </div>
